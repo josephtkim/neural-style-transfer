@@ -10,7 +10,7 @@ With Neural Style Transfer, we utilize a pre-trained network on an image classif
 Instead of updating the weights of this pre-trained network, we only update the pixels of the generated image, so there is no need to train the CNN model further.
 
 VGG19 architecture:
-![image](./vgg.png)
+![image](./VGG19.png)
 
 For Neural Style Transfer, the last 3 fully connected layers of VGG19 are removed, as they aren't necessary. We only care about the feature maps from the convolution layers.
 
