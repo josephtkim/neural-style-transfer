@@ -1,31 +1,5 @@
 # neural-style-transfer
 
-## Results
-The following settings typically resulted in decent outputs:
-- Content layers: 'block4_conv1'
-- Style layers: 'block1_conv1', 'block2_conv1', 'block3_conv1', 'block4_conv1'
-- `alpha = 1e1`
-- `beta = 1e6`
-- `total_variation_weight = 5e-2`
-- learning rate = 1
-- 500 epochs
-- Adam optimizer with `epsilon = 1e-1`
-
-### Example outputs
-<img src="./1-1.png" width="480" alt="Paris" />
-
-<img src="./2-2.png" width="480" alt="Dog" />
-
-<img src="./3-1.png" width="480" alt="Roof Piece" />
-
-<img src="./4-2.png" width="480" alt="Grass Field" />
-
-<img src="./5-1.png" width="480" alt="Moonlight" />
-
-<img src="./6-4.png" width="480" alt="Steins Gate" />
-
-<img src="./7-1.png" width="480" alt="Howl's Moving Castle" />
-
 ## Neural Style Transfer Overview
 
 The paper "A Neural Algorithm of Artistic Style" (https://arxiv.org/abs/1508.06576) describes an approach for style transfer that utilizes the learned feature maps of a CNN. It takes the neural representations of the feature maps to separate and then combine the content and style of images. The key finding in the paper is that the representations for content and style in a CNN are separable.
@@ -88,3 +62,29 @@ The loss function that NST minimizes is the total of the content and style losse
 $𝓛_{total}(p, a, x) = α𝓛_{content}(p, x) + β𝓛_{style}(a, x)$
 
 During training, the pixel values for the generated image will be updated based on the gradient of the total loss function.
+
+## Results
+The following settings typically resulted in decent outputs:
+- Content layers: 'block4_conv1'
+- Style layers: 'block1_conv1', 'block2_conv1', 'block3_conv1', 'block4_conv1'
+- `alpha = 1e1`
+- `beta = 1e6`
+- `total_variation_weight = 5e-2`
+- learning rate = 1
+- 500 epochs
+- Adam optimizer with `epsilon = 1e-1`
+
+### Example outputs
+<img src="./1-1.png" width="480" alt="Paris" />
+
+<img src="./2-2.png" width="480" alt="Dog" />
+
+<img src="./3-1.png" width="480" alt="Roof Piece" />
+
+<img src="./4-2.png" width="480" alt="Grass Field" />
+
+<img src="./5-1.png" width="480" alt="Moonlight" />
+
+<img src="./6-4.png" width="480" alt="Steins Gate" />
+
+<img src="./7-1.png" width="480" alt="Howl's Moving Castle" />
