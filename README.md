@@ -15,7 +15,7 @@ VGG19 architecture:
 For Neural Style Transfer, the last 3 fully connected layers of VGG19 are removed, as they aren't necessary. We only care about the feature maps from the convolution layers.
 
 As an example, these images might represent the features learned through 3 successive layers of a CNN:
-![image](https://developer.nvidia.com/blog/wp-content/uploads/2015/11/hierarchical_features.png)
+![image](./hierarchical_features.png)
 
 The first layer learns very simple edges, lines, etc. The second layer learns more advanced features such as eyes, noses, ears, and the final layer learns features for entire faces. In NST, the last layer's learned features would be the "content" we want to preserve in the generated image.
 
